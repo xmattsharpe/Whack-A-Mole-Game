@@ -24,6 +24,8 @@ namespace Whack_A_Mole_HW
 
         double AVG =0; // holds the average time (total time taken / clicks)
 
+        
+
         public Form1()
         {
       
@@ -161,6 +163,12 @@ namespace Whack_A_Mole_HW
             score++;
             clickCounter++;
             Button_Score.Text = "Score: " + score.ToString();
+
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = @"C:\Users\matth\Downloads\Untitled.wav";
+            player.Load();
+            player.Play();
+
             WinLose();
 
             
